@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene device-orientation-permission-ui="enabled: false" background="color: ivory"
+    inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+    <img id="panorama" src="glb/capturemap1.jpg">
+    <a-plane position="0 0 0" rotation="-90 0 0" width="0.5" height="0.5" color="gray"></a-plane>
+    <a-entity position="0 5 -2.5" text="align: center;
+        width: 20;
+        wrapCount: 70;
+        color: black;
+        value: SIMULACION VR" >
+    </a-entity>
+    <a-entity position="0 4.2 -2.5" text="align: center;
+        width: 20;
+        wrapCount: 70;
+        color: black;
+        value: Enemigo del juego Stolen Soul" >
+    </a-entity>
+    <a-entity position="0 3 -2.5" text="align: center;
+        width: 10;
+        wrapCount: 80;
+        color: black;
+        value: Puede moverse con las teclas y el mouse" >
+    </a-entity> 
+    <a-entity position="0 2.5 -2.5" text="align: center;
+        width: 10;
+        wrapCount: 80;
+        color: black;
+        value: Si entra en el modo VR de pantalla completa puede salir con ESC" >
+    </a-entity> 
+    <a-entity position="0 0 3">
+      <a-camera wasd-controls="acceleration:50">
+       
+      </a-camera>
+    </a-entity>
+
+    <a-assets>
+      <!-- <a-asset-item id="toon" src="glb/MutantIdle.glb"></a-asset-item> -->
+      <a-asset-item id="toon" src="glb/MutantFlexingMuscles.glb"></a-asset-item>
+    </a-assets>
+      <a-entity gltf-model="#toon"></a-entity>
+  
+      <a-sky src="#panorama"></a-sky>
+  </a-scene>
+
+</body>
+
+</html>
